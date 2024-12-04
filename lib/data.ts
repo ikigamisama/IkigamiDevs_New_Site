@@ -88,9 +88,9 @@ export const socials: SocialType[] = [
 
 export const stats: StatsType[] = [
 	{ num: 5, text: "Years of Experience" },
-	{ num: 50, text: "Projects completed" },
-	{ num: 8, text: "Technologies mastered" },
-	{ num: 500, text: "Code Commits" },
+	{ num: 80, text: "Repository" },
+	{ num: 20, text: "Data Projects Completed" },
+	{ num: 200, text: "Code Commits" },
 ];
 
 export const about: ResumeType = {

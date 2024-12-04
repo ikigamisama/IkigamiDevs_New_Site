@@ -2,7 +2,7 @@ import Photo from "@/components/molecules/Photo/Main";
 import { FiDownload } from "react-icons/fi";
 import { Button } from "@/components/atoms/ui/button";
 import Socials from "@/components/molecules/Socials/Main";
-import { jetbrainsMono, space_mono } from "@/lib/font";
+import { jetbrainsMono, roboto_mono, space_mono } from "@/lib/font";
 import Stats from "@/components/molecules/Stats/Main";
 
 export default function Home() {
@@ -15,8 +15,10 @@ export default function Home() {
 							Aspiring Software Developer / Data Analytics - Science
 						</span>
 						<h1 className='h1 mb-6'>
-							<span className='text-[65px]'>Yo, My name is</span> <br />{" "}
-							<span className='text-accent'>Franz Monzales</span>
+							<span className={`text-[45px] ${roboto_mono.className}`}>
+								Yo, My name is
+							</span>
+							<br /> <span className='text-accent'>Franz Monzales</span>
 						</h1>
 						<p
 							className={`max-w-[500px] mb-9 text-white/80 ${jetbrainsMono.className}`}>
