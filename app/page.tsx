@@ -11,17 +11,18 @@ export default function Home() {
 			<div className='container mx-auto h-full'>
 				<div className='flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24'>
 					<div className='text-center xl:text-left order-2 xl:order-none'>
-						<span className={`text-lg ${space_mono.className}`}>
+						<span className={`text-md xl:text-lg ${space_mono.className}`}>
 							Aspiring Software Developer / Data Analytics - Science
 						</span>
-						<h1 className='h1 mb-6'>
-							<span className={`text-[45px] ${roboto_mono.className}`}>
+						<h1 className='h1 mt-4 xl:mt-0 mb-6'>
+							<span
+								className={`text-[30px] xl:text-[45px] ${roboto_mono.className}`}>
 								Yo, My name is
 							</span>
 							<br /> <span className='text-accent'>Franz Monzales</span>
 						</h1>
 						<p
-							className={`max-w-[500px] mb-9 text-white/80 ${jetbrainsMono.className}`}>
+							className={`max-w-full xl:max-w-[500px] mb-9 text-white/80 ${jetbrainsMono.className}`}>
 							A seasoned Software Developer turned Data Analyst and aspiring
 							Data Scientist, leveraging my technical background to uncover
 							insights and drive data-driven decisions.

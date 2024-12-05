@@ -236,11 +236,6 @@ export const skills: ResumeType = {
 			type: "Web Development",
 			name: "PostgreSQL",
 		},
-		{
-			icon: SiPostgresql,
-			type: "Web Development",
-			name: "PostgreSQL",
-		},
 
 		{ icon: FaPython, type: "Data Science", name: "Python" },
 		{ icon: SiTensorflow, type: "Data Science", name: "TensorFlow" },
