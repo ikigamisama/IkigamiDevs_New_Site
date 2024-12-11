@@ -71,7 +71,7 @@ export const navLinks: NavLinks[] = [
 	},
 	{
 		name: "<blog>",
-		path: "/blog",
+		path: "https://ikigami-project-blog.vercel.app",
 	},
 	{
 		name: "<contact>",
