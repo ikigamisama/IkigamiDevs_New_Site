@@ -120,12 +120,12 @@ const ResumeLayout = () => {
 
 												<div className='flex flex-row mb-2 gap-4'>
 													<Button asChild>
-														<Link href={item.link}>
+														<Link href={item.link} target='_blank'>
 															<AiOutlineLink className='mr-2' /> Link
 														</Link>
 													</Button>
 													<Button variant='outline' asChild>
-														<Link href={item.img}>
+														<Link href={item.img} target='_blank'>
 															<IoDownloadOutline className='mr-2' />
 															Download Image
 														</Link>
