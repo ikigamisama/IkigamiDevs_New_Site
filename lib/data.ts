@@ -10,7 +10,7 @@ import {
 	FaLinkedin,
 	FaPython,
 	FaVuejs,
-	FaYoutube,
+	FaKaggle,
 } from "react-icons/fa";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import {
@@ -80,10 +80,14 @@ export const navLinks: NavLinks[] = [
 ];
 
 export const socials: SocialType[] = [
-	{ icon: FaGithub, path: "/" },
-	{ icon: FaLinkedin, path: "/" },
-	{ icon: FaYoutube, path: "/" },
-	{ icon: FaXTwitter, path: "/" },
+	{ icon: FaGithub, path: "https://github.com/ikigamisama" },
+	{
+		icon: FaLinkedin,
+		path: "https://www.linkedin.com/in/franz-monzales-671775135",
+	},
+
+	{ icon: FaXTwitter, path: "https://x.com/ikigamidevs" },
+	{ icon: FaKaggle, path: "https://www.kaggle.com/franzmonzales" },
 ];
 
 export const stats: StatsType[] = [
