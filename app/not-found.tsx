@@ -1,5 +1,5 @@
 import { Button } from "@/components/atoms/ui/button";
-import { jetbrainsMono, lato, space_mono } from "@/lib/font";
+import { jetbrainsMono, lato } from "@/lib/font";
 import Link from "next/link";
 
 export default function NotFound() {
