@@ -16,6 +16,13 @@ import { CiMenuFries } from "react-icons/ci";
 
 const MobileNav = () => {
 	const pathname = usePathname();
+
+	const handleScrollTo = (id: string) => {
+		const target = document.getElementById(id);
+		if (target) {
+			target.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to target
+		}
+	};
 	return (
 		<Sheet>
 			<SheetTrigger className="className='flex justify-center items-center'">
@@ -35,18 +42,40 @@ const MobileNav = () => {
 					</Link>
 				</div>
 				<nav className='flex flex-col justify-center items-center gap-8'>
-					{navLinks.map((link, index) => (
-						<Link
-							href={link.path}
-							key={index}
-							className={`${
-								link.path === pathname && "text-accent border-b-2 border-accent"
-							} text-xl hover:text-accent transition-all ${
-								roboto_mono.className
-							}`}>
-							{link.name}
-						</Link>
-					))}
+					{navLinks.map((link, index) => {
+						const isExternalLink = link.path.startsWith("https://");
+						const isHashLink = link.path.startsWith("#");
+
+						return isExternalLink ? (
+							<a
+								key={index}
+								href={link.path}
+								target='_blank'
+								rel='noopener noreferrer'
+								className={`${
+									link.path === pathname &&
+									"text-accent border-b-2 border-accent"
+								} font-medium hover:text-accent transition-all ${
+									roboto_mono.className
+								}`}>
+								{link.name}
+							</a>
+						) : (
+							<button
+								key={index}
+								onClick={() =>
+									isHashLink ? handleScrollTo(link.path.substring(1)) : null
+								}
+								className={`${
+									link.path === pathname &&
+									"text-accent border-b-2 border-accent"
+								} font-medium hover:text-accent transition-all ${
+									roboto_mono.className
+								}`}>
+								{link.name}
+							</button>
+						);
+					})}
 				</nav>
 			</SheetContent>
 		</Sheet>

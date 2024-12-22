@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { jetbrainsMono, roboto_mono } from "@/lib/font";
-import { motion } from "framer-motion";
 import { Button } from "@/components/atoms/ui/button";
 import { ScrollArea } from "@/components/atoms/ui/scroll-area";
 import {
@@ -31,17 +30,16 @@ import { AiOutlineLink } from "react-icons/ai";
 
 const ResumeLayout = () => {
 	return (
-		<motion.section
-			initial={{ opacity: 0 }}
-			animate={{
-				opacity: 1,
-				transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
-			}}
-			className='min-h-[80vh] flex items-center justify-center py-12 xl:py-0'>
+		<section className='h-full flex items-center justify-center py-12 xl:py-0 mb-12'>
 			<div className='container mx-auto'>
+				<h2
+					id='resume'
+					className={`mt-4 text-accent font-bold text-4xl ${jetbrainsMono.className}`}>
+					{"<resume>"}
+				</h2>
 				<Tabs
 					defaultValue='experience'
-					className='flex flex-col xl:flex-row gap-[60px]'>
+					className='flex flex-col xl:flex-row gap-[60px] mt-12'>
 					<TabsList className='flex flex-col w-full max-w-full xl:max-w-[380px] max-auto xl:mx-0 gap-6'>
 						{resumeTabList.map((tab, index) => (
 							<TabsTrigger
@@ -268,7 +266,7 @@ const ResumeLayout = () => {
 					</div>
 				</Tabs>
 			</div>
-		</motion.section>
+		</section>
 	);
 };
 

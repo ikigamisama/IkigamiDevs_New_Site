@@ -63,11 +63,11 @@ export const navLinks: NavLinks[] = [
 	},
 	{
 		name: "<resume>",
-		path: "/resume",
+		path: "#resume",
 	},
 	{
 		name: "<project>",
-		path: "/project",
+		path: "#project",
 	},
 	{
 		name: "<blog>",
@@ -75,7 +75,7 @@ export const navLinks: NavLinks[] = [
 	},
 	{
 		name: "<contact>",
-		path: "/contact",
+		path: "#contact",
 	},
 ];
 
@@ -287,7 +287,7 @@ export const contactInfo = [
 	{
 		icon: FaPhoneAlt,
 		title: "Phone",
-		description: "(+40) 312 654 876",
+		description: "(+639) 671 840 625",
 	},
 	{
 		icon: FaEnvelope,
