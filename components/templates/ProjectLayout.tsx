@@ -31,8 +31,6 @@ const ProjectLayout = () => {
 		fetchPosts();
 	}, []);
 
-	console.log(posts);
-
 	return (
 		<section className='h-full flex items-center justify-center py-12 xl:py-0'>
 			<div className='container mx-auto'>
@@ -41,6 +39,17 @@ const ProjectLayout = () => {
 					className={`mt-4 mb-8 text-accent font-bold text-4xl ${jetbrainsMono.className}`}>
 					{"<project>"}
 				</h2>
+
+				<p
+					className={` text-white/60 mx-auto xl:mx-0 text-center lg:text-justify ${jetbrainsMono.className}`}>
+					Our project blog, Ikigami Project Blog, showcases exciting work in
+					Data Analysis and Machine Learning. We cover topics like automating
+					data tasks, detecting patterns, and building predictive models. By
+					combining practical analysis techniques with cutting-edge machine
+					learning, we aim to turn raw data into actionable insights. Whether
+					you're exploring trends or crafting algorithms, our blog provides a
+					clear, insightful guide to mastering data-driven projects.
+				</p>
 
 				<ul className='mt-7 card_grid'>
 					{loading ? (
@@ -65,7 +74,19 @@ const ProjectLayout = () => {
 										<p className={`startup-card_date ${roboto_mono.className}`}>
 											{dateOnly}
 										</p>
-										<div className='flex'></div>
+										<Avatar className=' w-[48px] h-[48px] flex items-center'>
+											{post?.Author?.avatar_url === null ? (
+												<AvatarFallback className='bg-primary text-white text-5xl'>
+													{avatar_fallback}
+												</AvatarFallback>
+											) : (
+												<AvatarImage
+													src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/${post?.Author?.avatar_url}`}
+													alt={avatar_fallback}
+													className='object-cover'
+												/>
+											)}
+										</Avatar>
 									</div>
 
 									<div className='flex-between mt-5 gap-5'>
@@ -82,20 +103,6 @@ const ProjectLayout = () => {
 												</h3>
 											</Link>
 										</div>
-
-										<Avatar className=' w-[48px] h-[48px] flex items-center'>
-											{post?.Author?.avatar_url === null ? (
-												<AvatarFallback className='bg-primary text-white text-5xl'>
-													{avatar_fallback}
-												</AvatarFallback>
-											) : (
-												<AvatarImage
-													src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/${post?.Author?.avatar_url}`}
-													alt={avatar_fallback}
-													className='object-cover'
-												/>
-											)}
-										</Avatar>
 									</div>
 									<p className={`startup-card_desc ${roboto_mono.className}`}>
 										{post.description}
