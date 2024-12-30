@@ -42,13 +42,13 @@ const ProjectLayout = () => {
 
 				<p
 					className={` text-white/60 mx-auto xl:mx-0 text-center lg:text-justify ${jetbrainsMono.className}`}>
-					Our project blog, Ikigami Project Blog, showcases exciting work in
-					Data Analysis and Machine Learning. We cover topics like automating
-					data tasks, detecting patterns, and building predictive models. By
-					combining practical analysis techniques with cutting-edge machine
-					learning, we aim to turn raw data into actionable insights. Whether
-					you're exploring trends or crafting algorithms, our blog provides a
-					clear, insightful guide to mastering data-driven projects.
+					Showcasing exciting work in Data Analysis and Machine Learning, this
+					project blog covers topics such as automating data tasks, detecting
+					patterns, and building predictive models. By combining practical
+					analysis techniques with cutting-edge machine learning, the blog aims
+					to turn raw data into actionable insights. Whether exploring trends or
+					crafting algorithms, it provides a clear, insightful guide to
+					mastering data-driven projects.
 				</p>
 
 				<ul className='mt-7 card_grid'>
