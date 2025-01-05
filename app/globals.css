@@ -48,6 +48,6 @@
 	}
 
 	.text-26-semibold {
-		@apply font-bold text-[26px];
+		@apply font-bold text-[28px] leading-relaxed;
 	}
 }

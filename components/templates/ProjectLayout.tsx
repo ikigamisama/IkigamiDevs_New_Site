@@ -51,7 +51,11 @@ const ProjectLayout = () => {
 					mastering data-driven projects.
 				</p>
 
-				<ul className='mt-7 card_grid'>
+				<h2 className={`my-8 text white text-3xl ${jetbrainsMono.className}`}>
+					Highlight Projects
+				</h2>
+
+				<ul className='my-7 card_grid'>
 					{loading ? (
 						<>
 							<li className='group'>
@@ -68,66 +72,243 @@ const ProjectLayout = () => {
 						posts.map((post, index) => {
 							const dateOnly = dayjs(post.created_at).format("MMMM DD, YYYY");
 							const avatar_fallback = `${post?.Author?.first_name[0]}${post?.Author?.last_name[0]}`;
-							return (
-								<li key={index} className='startup-card group'>
-									<div className='flex-between'>
-										<p className={`startup-card_date ${roboto_mono.className}`}>
-											{dateOnly}
-										</p>
-										<Avatar className=' w-[48px] h-[48px] flex items-center'>
-											{post?.Author?.avatar_url === null ? (
-												<AvatarFallback className='bg-primary text-white text-5xl'>
-													{avatar_fallback}
-												</AvatarFallback>
-											) : (
-												<AvatarImage
-													src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/${post?.Author?.avatar_url}`}
-													alt={avatar_fallback}
-													className='object-cover'
-												/>
-											)}
-										</Avatar>
-									</div>
-
-									<div className='flex-between mt-5 gap-5'>
-										<div className='flex-1'>
+							if (post.category.includes("Highlight")) {
+								return (
+									<li key={index} className='startup-card group'>
+										<div className='flex-between'>
 											<p
-												className={`text-16-medium line-clamp-1 ${jetbrainsMono.className}`}>
-												{post.category.split(", ")[0]}
+												className={`startup-card_date ${roboto_mono.className}`}>
+												{dateOnly}
 											</p>
-											<Link
-												href={`https://ikigami-project-blog.vercel.app/posts/`}>
-												<h3
-													className={`text-26-semibold line-clamp-1 ${roboto_mono.className}`}>
-													{post.title}
-												</h3>
-											</Link>
+											<Avatar className=' w-[48px] h-[48px] flex items-center'>
+												{post?.Author?.avatar_url === null ? (
+													<AvatarFallback className='bg-primary text-white text-5xl'>
+														{avatar_fallback}
+													</AvatarFallback>
+												) : (
+													<AvatarImage
+														src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/${post?.Author?.avatar_url}`}
+														alt={avatar_fallback}
+														className='object-cover'
+													/>
+												)}
+											</Avatar>
 										</div>
-									</div>
-									<p className={`startup-card_desc ${roboto_mono.className}`}>
-										{post.description}
-									</p>
 
-									<img
-										src={`${post.image_link}`}
-										alt='placeholder'
-										className='startup-card_img'
-									/>
+										<div className='flex-between mt-5 gap-5'>
+											<div className='flex-1'>
+												<p
+													className={`text-16-medium line-clamp-1 ${jetbrainsMono.className}`}>
+													{post.category.split(", ")[0]}
+												</p>
+												<Link
+													href={`https://ikigami-project-blog.vercel.app/posts/`}>
+													<h3
+														className={`text-26-semibold line-clamp-2 ${roboto_mono.className}`}>
+														{post.title}
+													</h3>
+												</Link>
+											</div>
+										</div>
+										<p className={`startup-card_desc ${roboto_mono.className}`}>
+											{post.description}
+										</p>
 
-									<div className='flex-between gap-3 mt-5'>
-										<div></div>
-										<Button
-											className={`startup-card_btn text-white ${space_mono.className}`}
-											asChild>
-											<Link
-												target='_blank'
-												href={`https://ikigami-project-blog.vercel.app/posts/${post.slug_title}`}>
-												Go To Blog
-											</Link>
-										</Button>
-									</div>
-								</li>
-							);
+										<img
+											src={`${post.image_link}`}
+											alt='placeholder'
+											className='startup-card_img'
+										/>
+
+										<div className='flex-between gap-3 mt-5'>
+											<div></div>
+											<Button
+												className={`startup-card_btn text-white ${space_mono.className}`}
+												asChild>
+												<Link
+													target='_blank'
+													href={`https://ikigami-project-blog.vercel.app/posts/${post.slug_title}`}>
+													Go To Blog
+												</Link>
+											</Button>
+										</div>
+									</li>
+								);
+							}
+						})
+					)}
+				</ul>
+				<h2 className={`my-8 text white text-3xl ${jetbrainsMono.className}`}>
+					Stratascratch Data Projects
+				</h2>
+				<ul className='my-7 card_grid'>
+					{loading ? (
+						<>
+							<li className='group'>
+								<Skeleton className='w-full h-[400px]' />
+							</li>
+							<li className='group'>
+								<Skeleton className='w-full h-[400px]' />
+							</li>
+							<li className='group'>
+								<Skeleton className='w-full h-[400px]' />
+							</li>
+						</>
+					) : (
+						posts.map((post, index) => {
+							const dateOnly = dayjs(post.created_at).format("MMMM DD, YYYY");
+							const avatar_fallback = `${post?.Author?.first_name[0]}${post?.Author?.last_name[0]}`;
+							console.log(post.category);
+							if (post.category.includes("Stratascratch")) {
+								return (
+									<li key={index} className='startup-card group'>
+										<div className='flex-between'>
+											<p
+												className={`startup-card_date ${roboto_mono.className}`}>
+												{dateOnly}
+											</p>
+											<Avatar className=' w-[48px] h-[48px] flex items-center'>
+												{post?.Author?.avatar_url === null ? (
+													<AvatarFallback className='bg-primary text-white text-5xl'>
+														{avatar_fallback}
+													</AvatarFallback>
+												) : (
+													<AvatarImage
+														src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/${post?.Author?.avatar_url}`}
+														alt={avatar_fallback}
+														className='object-cover'
+													/>
+												)}
+											</Avatar>
+										</div>
+
+										<div className='flex-between mt-5 gap-5'>
+											<div className='flex-1'>
+												<p
+													className={`text-16-medium line-clamp-1 ${jetbrainsMono.className}`}>
+													{post.category.split(", ")[0]}
+												</p>
+												<Link
+													href={`https://ikigami-project-blog.vercel.app/posts/`}>
+													<h3
+														className={`text-26-semibold line-clamp-2 ${roboto_mono.className}`}>
+														{post.title}
+													</h3>
+												</Link>
+											</div>
+										</div>
+										<p className={`startup-card_desc ${roboto_mono.className}`}>
+											{post.description}
+										</p>
+
+										<img
+											src={`${post.image_link}`}
+											alt='placeholder'
+											className='startup-card_img'
+										/>
+
+										<div className='flex-between gap-3 mt-5'>
+											<div></div>
+											<Button
+												className={`startup-card_btn text-white ${space_mono.className}`}
+												asChild>
+												<Link
+													target='_blank'
+													href={`https://ikigami-project-blog.vercel.app/posts/${post.slug_title}`}>
+													Go To Blog
+												</Link>
+											</Button>
+										</div>
+									</li>
+								);
+							}
+						})
+					)}
+				</ul>
+				<h2 className={`my-8 text white text-3xl ${jetbrainsMono.className}`}>
+					Other Projects
+				</h2>
+				<ul className='my-7 card_grid'>
+					{loading ? (
+						<>
+							<li className='group'>
+								<Skeleton className='w-full h-[400px]' />
+							</li>
+							<li className='group'>
+								<Skeleton className='w-full h-[400px]' />
+							</li>
+							<li className='group'>
+								<Skeleton className='w-full h-[400px]' />
+							</li>
+						</>
+					) : (
+						posts.map((post, index) => {
+							const dateOnly = dayjs(post.created_at).format("MMMM DD, YYYY");
+							const avatar_fallback = `${post?.Author?.first_name[0]}${post?.Author?.last_name[0]}`;
+							console.log(post.category);
+							if (!post.category.includes("Highlight")) {
+								return (
+									<li key={index} className='startup-card group'>
+										<div className='flex-between'>
+											<p
+												className={`startup-card_date ${roboto_mono.className}`}>
+												{dateOnly}
+											</p>
+											<Avatar className=' w-[48px] h-[48px] flex items-center'>
+												{post?.Author?.avatar_url === null ? (
+													<AvatarFallback className='bg-primary text-white text-5xl'>
+														{avatar_fallback}
+													</AvatarFallback>
+												) : (
+													<AvatarImage
+														src={`${process.env.NEXT_PUBLIC_SUPABASE_URL}/storage/v1/object/public/${post?.Author?.avatar_url}`}
+														alt={avatar_fallback}
+														className='object-cover'
+													/>
+												)}
+											</Avatar>
+										</div>
+
+										<div className='flex-between mt-5 gap-5'>
+											<div className='flex-1'>
+												<p
+													className={`text-16-medium line-clamp-1 ${jetbrainsMono.className}`}>
+													{post.category.split(", ")[0]}
+												</p>
+												<Link
+													href={`https://ikigami-project-blog.vercel.app/posts/`}>
+													<h3
+														className={`text-26-semibold line-clamp-2 ${roboto_mono.className}`}>
+														{post.title}
+													</h3>
+												</Link>
+											</div>
+										</div>
+										<p className={`startup-card_desc ${roboto_mono.className}`}>
+											{post.description}
+										</p>
+
+										<img
+											src={`${post.image_link}`}
+											alt='placeholder'
+											className='startup-card_img'
+										/>
+
+										<div className='flex-between gap-3 mt-5'>
+											<div></div>
+											<Button
+												className={`startup-card_btn text-white ${space_mono.className}`}
+												asChild>
+												<Link
+													target='_blank'
+													href={`https://ikigami-project-blog.vercel.app/posts/${post.slug_title}`}>
+													Go To Blog
+												</Link>
+											</Button>
+										</div>
+									</li>
+								);
+							}
 						})
 					)}
 				</ul>
