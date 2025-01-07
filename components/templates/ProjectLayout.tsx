@@ -158,7 +158,6 @@ const ProjectLayout = () => {
 						posts.map((post, index) => {
 							const dateOnly = dayjs(post.created_at).format("MMMM DD, YYYY");
 							const avatar_fallback = `${post?.Author?.first_name[0]}${post?.Author?.last_name[0]}`;
-							console.log(post.category);
 							if (post.category.includes("Stratascratch")) {
 								return (
 									<li key={index} className='startup-card group'>
@@ -245,7 +244,6 @@ const ProjectLayout = () => {
 						posts.map((post, index) => {
 							const dateOnly = dayjs(post.created_at).format("MMMM DD, YYYY");
 							const avatar_fallback = `${post?.Author?.first_name[0]}${post?.Author?.last_name[0]}`;
-							console.log(post.category);
 							if (!post.category.includes("Highlight")) {
 								return (
 									<li key={index} className='startup-card group'>
