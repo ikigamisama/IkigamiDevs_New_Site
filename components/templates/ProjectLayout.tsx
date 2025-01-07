@@ -7,6 +7,7 @@ import Link from "next/link";
 import { Skeleton } from "../atoms/ui/skeleton";
 import dayjs from "dayjs";
 import { Avatar, AvatarFallback, AvatarImage } from "../atoms/ui/avatar";
+import { convertToTitle } from "@/lib/string";
 
 const ProjectLayout = () => {
 	const [posts, setPosts] = useState<any[]>([]);
@@ -185,7 +186,7 @@ const ProjectLayout = () => {
 											<div className='flex-1'>
 												<p
 													className={`text-16-medium line-clamp-1 ${jetbrainsMono.className}`}>
-													{post.category.split(", ")[0]}
+													{convertToTitle(post.secondary_category)}
 												</p>
 												<Link
 													href={`https://ikigami-project-blog.vercel.app/posts/`}>
