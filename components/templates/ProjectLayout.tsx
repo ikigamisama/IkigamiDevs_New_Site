@@ -245,7 +245,10 @@ const ProjectLayout = () => {
 						posts.map((post, index) => {
 							const dateOnly = dayjs(post.created_at).format("MMMM DD, YYYY");
 							const avatar_fallback = `${post?.Author?.first_name[0]}${post?.Author?.last_name[0]}`;
-							if (!post.category.includes("Highlight")) {
+							if (
+								!post.category.includes("Highlight") &&
+								!post.category.includes("Stratascratch")
+							) {
 								return (
 									<li key={index} className='startup-card group'>
 										<div className='flex-between'>
