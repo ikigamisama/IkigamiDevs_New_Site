@@ -34,6 +34,7 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
 type NavLinks = { name: string; path: string };
 type SocialType = { icon: IconType; path: string };
 type StatsType = { num: number; text: string };
+type CategoryOption = { value: string; label: string };
 
 type ResumeListItemsType = { fieldName: string; fieldValue: string };
 type ResumeSkillListType = { name: string; img: string; link: string };
@@ -299,4 +300,14 @@ export const contactInfo = [
 		title: "Address",
 		description: "Davao City, Phillippines",
 	},
+];
+
+export const stratascratchCategory: CategoryOption[] = [
+	{ value: "business-analysis", label: "Business Analysis" },
+	{ value: "data-exploration", label: "Data Exploration" },
+	{ value: "data-engineering", label: "Data Engineering" },
+	{ value: "regression", label: "Regression" },
+	{ value: "classification", label: "Classification" },
+	{ value: "nlp", label: "NLP" },
+	{ value: "clustering", label: "Clustering" },
 ];
