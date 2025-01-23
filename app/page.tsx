@@ -8,6 +8,7 @@ import ContactLayout from "@/components/templates/ContactLayout";
 import { FiDownload } from "react-icons/fi";
 import { Button } from "@/components/atoms/ui/button";
 import { jetbrainsMono, roboto_mono, space_mono } from "@/lib/font";
+import Link from "next/link";
 
 export default function Home() {
 	return (
@@ -35,11 +36,16 @@ export default function Home() {
 
 							<div className='flex flex-col xl:flex-row items-center gap-8'>
 								<Button
+									asChild
 									variant='outline'
 									size='lg'
 									className={`uppercase flex items-center gap-2 ${space_mono.className}`}>
-									<span>Download CV</span>
-									<FiDownload className='text-xl' />
+									<a
+										href='https://tdhghaslnufgtzjybhhf.supabase.co/storage/v1/object/public/resume/franz_monzales_cv.pdf'
+										target='_blank'>
+										<span>Download CV</span>
+										<FiDownload className='text-xl' />
+									</a>
 								</Button>
 								<div className='mb-8 xl:mb-0'>
 									<Socials
