@@ -105,7 +105,7 @@ const ProjectLayout = () => {
 													{post.category.split(", ")[0]}
 												</p>
 												<Link
-													href={`https://ikigami-project-blog.vercel.app/posts/`}>
+													href={`https://ikigami-project-blog.vercel.app/posts/${post.slug_title}`}>
 													<h3
 														className={`text-26-semibold line-clamp-2 ${roboto_mono.className}`}>
 														{post.title}
@@ -209,7 +209,7 @@ const ProjectLayout = () => {
 																{convertToTitle(post.secondary_category)}
 															</p>
 															<Link
-																href={`https://ikigami-project-blog.vercel.app/posts/`}>
+																href={`https://ikigami-project-blog.vercel.app/posts/${post.slug_title}`}>
 																<h3
 																	className={`text-26-semibold line-clamp-2 ${roboto_mono.className}`}>
 																	{post.title}
@@ -303,7 +303,7 @@ const ProjectLayout = () => {
 													{post.category.split(", ")[0]}
 												</p>
 												<Link
-													href={`https://ikigami-project-blog.vercel.app/posts/`}>
+													href={`https://ikigami-project-blog.vercel.app/posts/${post.slug_title}`}>
 													<h3
 														className={`text-26-semibold line-clamp-2 ${roboto_mono.className}`}>
 														{post.title}
