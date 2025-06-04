@@ -30,7 +30,7 @@ export default function Home() {
 							<p
 								className={`max-w-full xl:max-w-[500px] mb-9 text-white/80 ${jetbrainsMono.className}`}>
 								Software Developer turned Data Analyst, now pursuing Data
-								Engineering—leveraging my strong technical foundation in
+								Engineering leveraging my strong technical foundation in
 								programming and analytics to extract insights, build data
 								solutions, and support smarter, data-driven decisions.
 							</p>

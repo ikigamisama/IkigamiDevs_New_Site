@@ -9,8 +9,7 @@ import { Avatar, AvatarImage } from "../atoms/ui/avatar";
 import { project } from "@/lib/data";
 
 const ProjectLayout = () => {
-	const [posts, setPosts] = useState<any[]>(project);
-	const [loading, setLoading] = useState(true);
+	const [posts, _] = useState<any[]>(project);
 
 	return (
 		<section className='h-full flex items-center justify-center py-12 xl:py-0'>
