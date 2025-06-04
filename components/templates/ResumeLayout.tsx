@@ -151,11 +151,11 @@ const ResumeLayout = () => {
 									<div className='mb-8'>
 										<h1
 											className={`text-2xl font-bold mb-6 ${roboto_mono.className}`}>
-											Data Science
+											Data Engineering
 										</h1>
 										<ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
 											{skills.series?.map((skill, index) => {
-												if (skill.type == "Data Science") {
+												if (skill.type == "Data Engineering") {
 													return (
 														<li key={index}>
 															<TooltipProvider delayDuration={100}>
@@ -184,6 +184,34 @@ const ResumeLayout = () => {
 										<ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
 											{skills.series?.map((skill, index) => {
 												if (skill.type == "Data Analyst") {
+													return (
+														<li key={index}>
+															<TooltipProvider delayDuration={100}>
+																<Tooltip>
+																	<TooltipTrigger className='w-full h-[150px] bg-[#232329] roundex-xl flex justify-center items-center group'>
+																		<div className='text-7xl group-hover:text-accent transition-all duration-300'>
+																			<skill.icon />
+																		</div>
+																	</TooltipTrigger>
+																	<TooltipContent>
+																		<p>{skill.name}</p>
+																	</TooltipContent>
+																</Tooltip>
+															</TooltipProvider>
+														</li>
+													);
+												}
+											})}
+										</ul>
+									</div>
+									<div className='mb-8'>
+										<h1
+											className={`text-2xl font-bold mb-6 ${roboto_mono.className}`}>
+											Data Science
+										</h1>
+										<ul className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]'>
+											{skills.series?.map((skill, index) => {
+												if (skill.type == "Data Science") {
 													return (
 														<li key={index}>
 															<TooltipProvider delayDuration={100}>

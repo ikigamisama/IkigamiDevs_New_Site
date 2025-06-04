@@ -44,7 +44,7 @@
 	}
 
 	.startup-card_img {
-		@apply w-full h-[164px] rounded-[10px] object-cover;
+		@apply w-full h-[500px] rounded-[10px] object-cover;
 	}
 
 	.text-26-semibold {
