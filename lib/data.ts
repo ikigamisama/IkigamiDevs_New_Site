@@ -178,6 +178,11 @@ export const education: ResumeType = {
 		"Driven by curiosity and a passion for learning, I’ve built a strong foundation in Data Analytics and Data Engineering through hands-on, industry-recognized certifications from IBM, DeepLearning.AI, and 365 Data Science. These programs covered key areas such as data analysis, data engineering, visualization, and machine learning—preparing me to design data pipelines, extract insights, and contribute to data-driven decision-making.",
 	list: [
 		{
+			name: "365 Data Engineering Certification",
+			img: "/assets/certifications/Data_Engineer_365.png",
+			link: "https://learn.365datascience.com/certificates/DD-0FA99845A0/",
+		},
+		{
 			name: "DeepLearning.AI Data Engineering",
 			img: "/assets/certifications/DataEngineering_Deeplearning.png",
 			link: "https://www.coursera.org/account/accomplishments/professional-cert/1AT47XEDRYSM",
@@ -333,80 +338,80 @@ export const stratascratchCategory: CategoryOption[] = [
 
 export const project: ProjectListType[] = [
 	{
-		created_at: "2025-05-31T00:00:00Z",
+		created_at: "2025-11-30T00:00:00Z",
 		avatar_url:
 			"https://tdhghaslnufgtzjybhhf.supabase.co/storage/v1/object/public/avatars/4971942f-5d8e-433a-a87e-2ed5f50c940e-0.5201631380654055.jpg",
 		category: "Data Engineering",
-		link: "https://github.com/ikigamisama/ETL_Web_Scrape_World_Data",
-		title: "ETL Web Scrape World Data",
+		link: "https://github.com/ikigamisama/SyntheticDataCrafter",
+		title: "SyntheticDataCrafter",
 		description:
-			"ETL_Web_Scrape_World_Data is a comprehensive web scraping ETL pipeline using Apache Airflow 3, Docker, and MinIO to automate the extraction and storage of global statistics from Worldometers.info. This pipeline collects 11 different categories of world data including demographics, economics, energy, environment, and geographic information.",
+			"Hyper-realistic synthetic data generator — 750+ field types, real-world distributions, relational schemas, and instant export to 10+ formats.",
 		image_link:
-			"https://raw.githubusercontent.com/ikigamisama/ETL_Web_Scrape_World_Data/main/image.png",
+			"https://tdhghaslnufgtzjybhhf.supabase.co/storage/v1/object/public/resume/synthethic_data.png",
 	},
 
 	{
-		created_at: "2025-05-28T00:00:00Z",
+		created_at: "2025-11-20T00:00:00Z",
 		avatar_url:
 			"https://tdhghaslnufgtzjybhhf.supabase.co/storage/v1/object/public/avatars/4971942f-5d8e-433a-a87e-2ed5f50c940e-0.5201631380654055.jpg",
 		category: "Data Engineering",
-		link: "https://github.com/ikigamisama/End-to-End-ETL-PySpark",
-		title: "End to End ETL PySpark",
+		link: "https://github.com/ikigamisama/ETL_Innovation_Connectivity",
+		title: "Innovation & Connectivity ETL",
 		description:
-			"An end-to-end ETL pipeline implemented using Apache Airflow 3.0.1, Apache Spark, MinIO, and Docker, designed to ingest, transform, and load retail data into a DuckDB-based analytical environment..",
+			"A production-grade, fully automated ETL pipeline that ingests, cleans, and transforms 8 key innovation & digital connectivity metrics from Our World in Data (OWID) using the Medallion Architecture (Bronze → Silver → Gold).",
 		image_link:
-			"https://github.com/ikigamisama/End-to-End-ETL-PySpark/raw/main/assets/DAG.PNG",
+			"https://tdhghaslnufgtzjybhhf.supabase.co/storage/v1/object/public/resume/OWID.png",
 	},
 
 	{
-		created_at: "2025-05-28T00:00:00Z",
+		created_at: "2025-11-22T00:00:00Z",
 		avatar_url:
 			"https://tdhghaslnufgtzjybhhf.supabase.co/storage/v1/object/public/avatars/4971942f-5d8e-433a-a87e-2ed5f50c940e-0.5201631380654055.jpg",
 		category: "Data Engineering",
-		link: "https://github.com/ikigamisama/Data-Warehouse-Medallion",
-		title: "Data Warehouse Medallion",
+		link: "https://github.com/ikigamisama/RemitFlowPH",
+		title: "RemitFlow PH - Real-Time OFW Remittance Intelligence Platform",
 		description:
-			"A local data pipeline setup using Docker Compose, built around the Medallion architecture. It integrates Apache Airflow 3.0.1, DuckDB, PostgreSQL, MinIO, Redis, Jupyter, and pgAdmin to support scalable orchestration, storage, and analysis workflows",
+			"A production-grade Kappa architecture streaming analytics platform for monitoring Overseas Filipino Worker (OFW) remittances with real-time fraud detection, corridor analytics, and channel performance tracking.",
 		image_link:
-			"https://raw.githubusercontent.com/ikigamisama/Data-Warehouse-Medallion/main/assets/dag_df.PNG",
+			"https://raw.githubusercontent.com/ikigamisama/RemitFlowPH/main/image.png",
 	},
 
 	{
-		created_at: "2025-06-03T00:00:00Z",
+		created_at: "2025-11-25T00:00:00Z",
 		avatar_url:
 			"https://tdhghaslnufgtzjybhhf.supabase.co/storage/v1/object/public/avatars/4971942f-5d8e-433a-a87e-2ed5f50c940e-0.5201631380654055.jpg",
 		category: "Data Engineering",
-		link: "https://github.com/ikigamisama/ETL_Air_Quality",
-		title: "Air Quality Data PH",
+		link: "https://github.com/ikigamisama/Walletflow-PH",
+		title: "WalletFlow-PH: Real-Time Fintech Transaction Pipeline",
 		description:
-			"A Python ETL pipeline for collecting and processing air quality data from cities across the Philippines using the OpenWeatherMap API.",
+			"A production-grade data engineering pipeline processing 100,000+ transactions per minute for Philippine e-wallet systems with real-time fraud detection.",
 		image_link:
-			"https://raw.githubusercontent.com/ikigamisama/ETL_Air_Quality/main/image.png",
+			"https://raw.githubusercontent.com/ikigamisama/Walletflow-PH/main/image.png",
 	},
 
 	{
-		created_at: "2025-06-03T00:00:00Z",
+		created_at: "2025-11-30T00:00:00Z",
 		avatar_url:
 			"https://tdhghaslnufgtzjybhhf.supabase.co/storage/v1/object/public/avatars/4971942f-5d8e-433a-a87e-2ed5f50c940e-0.5201631380654055.jpg",
 		category: "Data Engineering",
-		link: "https://github.com/ikigamisama/ETL_PSE_EOD",
-		title: "PSE EOD Data Scraper",
+		link: "https://github.com/ikigamisama/DataLakehouse-Delta",
+		title: "E-commerce Data Lakehouse with Apache Airflow 3.1",
 		description:
-			"A Python ETL (Extract, Transform, Load) pipeline for scraping End-of-Day (EOD) stock data from the Philippine Stock Exchange (PSE) via the Investagrams API.",
+			"A production-ready Data Lakehouse implementation using Apache Airflow 3.1, Delta Lake, MinIO (S3-compatible storage), and Apache Spark cluster for distributed processing.",
 		image_link:
-			"https://tdhghaslnufgtzjybhhf.supabase.co/storage/v1/object/public/content//image_2025-06-04_224817972.png",
+			"https://tdhghaslnufgtzjybhhf.supabase.co/storage/v1/object/public/resume/delta_lake.png",
 	},
 
 	{
-		created_at: "2025-05-07T00:00:00Z",
+		created_at: "2025-10-30T00:00:00Z",
 		avatar_url:
 			"https://tdhghaslnufgtzjybhhf.supabase.co/storage/v1/object/public/avatars/4971942f-5d8e-433a-a87e-2ed5f50c940e-0.5201631380654055.jpg",
 		category: "Data Engineering",
-		link: "https://github.com/ikigamisama/Philippine-2025-Election-Candidate-Data",
-		title: "Philippine 2025 Election Candidate Data",
+		link: "https://github.com/ikigamisama/Iki-Scraper",
+		title: "Iki-Scraper",
 		description:
-			"This project focuses on collecting, cleaning, and modeling candidate information for the 2025 Philippine National Elections. It automates the data pipeline from raw ballot formats to a clean, structured dataset for analysis and further use.",
+			"A robust, production-ready asynchronous web scraper built using Playwright, Tenacity, and a custom ProxyRotator. Designed for scalability and integration into ETL or Airflow pipelines.",
 		image_link:
-			"https://tdhghaslnufgtzjybhhf.supabase.co/storage/v1/object/public/content//DE%20Ballot.jpg",
+			"https://tdhghaslnufgtzjybhhf.supabase.co/storage/v1/object/public/resume/web_scraper.png",
 	},
 ];
