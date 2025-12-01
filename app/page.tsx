@@ -29,10 +29,10 @@ export default function Home() {
 							</h1>
 							<p
 								className={`max-w-full xl:max-w-[500px] mb-9 text-white/80 ${jetbrainsMono.className}`}>
-								Software Developer turned Data Analyst, now pursuing Data
-								Engineering leveraging my strong technical foundation in
-								programming and analytics to extract insights, build data
-								solutions, and support smarter, data-driven decisions.
+								With a foundation in Software Development and Data Analysis, I’m
+								now focused on Data Engineering—building automated ETL
+								pipelines, optimizing data workflows, and enabling teams to
+								unlock value from data at scale.
 							</p>
 
 							<div className='flex flex-col xl:flex-row items-center gap-8'>
