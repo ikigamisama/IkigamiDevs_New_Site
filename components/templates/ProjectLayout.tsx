@@ -58,8 +58,7 @@ const ProjectLayout = () => {
 											className={`text-16-medium line-clamp-1 ${jetbrainsMono.className}`}>
 											{post.category.split(", ")[0]}
 										</p>
-										<Link
-											href={`https://ikigami-project-blog.vercel.app/posts/${post.slug_title}`}>
+										<Link target='_blank' href={`${post.link}`}>
 											<h3
 												className={`text-26-semibold line-clamp-2 ${roboto_mono.className}`}>
 												{post.title}
